@@ -1,0 +1,141 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+23. Footer
+******************************************************* 
+*************************************************************** */
+footer {
+    background-color: #161616;
+}
+.philip-footer-content {
+    p {
+        color: #BFBFBF;
+        margin-bottom: 0;
+    }
+} 
+.philip-footer-title {
+    h3 {
+        color: #fff;
+        font-size: 20px;
+        font-family: $roboto;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+}
+.philip-quick-link ul {
+    li {
+        list-style: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: #BFBFBF;
+    }
+}
+.philip-quick-link ul li:not(:last-child) {
+    margin-bottom: 16px;
+}
+.philip-quick-link ul li a:hover {
+    color: $primaryColor;
+    transition: .3s;
+}
+.blog-content {
+    a {
+        color: #fff;
+        font-size: 16px;
+        font-family: $roboto;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    p {
+        font-size: 13px;
+        font-family: $nunito;
+        color: #BFBFBF;
+        margin-bottom: 0;
+        text-transform: capitalize;
+    }
+}
+.blog-content:hover  a {
+    color: $primaryColor;;
+    transition: .3s;
+}
+.line {
+    position: relative;
+}
+.line::after {
+	content: "";
+	display: block;
+	height: 13px;
+	width: 1px;
+	background: #BFBFBF;
+	position: absolute;
+	margin-left: -9px;
+	top: 5px;
+}
+.contact-text {
+    h4 {
+        color: #fff;
+        font-size: 16px;
+        font-family: $roboto;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+    p {
+        font-size: 13px;
+        font-family: $nunito;
+        color: #BFBFBF;
+        text-transform: capitalize;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+}
+.philip-footer-bottom {
+    padding: 50px 0;
+    border-top: 1px solid #7070701a;
+  }
+.philip-footer-bottom-content {
+    p {
+        color: #BFBFBF;
+        font-size: 16px;
+        font-family: $nunito;
+        font-weight: 400;
+        margin: 0;
+     }
+}
+.footer-terms li {
+    list-style: none;
+}
+.footer-terms li:not(:last-child) {
+    margin-right: 47px;
+}
+.footer-terms li {
+   a {
+    color: #BFBFBF;
+    font-size: 14px;
+    font-weight: 400;
+   }
+   a:hover {
+    color: $primaryColor;;
+    transition: .3s;
+   }
+}
+.footer-terms {
+    .line-footer {
+        position: relative;
+    }
+    .line-footer::after {
+        content: "";
+        display: block;
+        display: flex;
+        top: 7px;
+        right: -26px;
+        background: #BFBFBF;
+        height: 13px;
+        width: 1px;
+        position: absolute;
+    }
+}

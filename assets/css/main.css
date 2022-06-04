@@ -159,6 +159,9 @@ body {
 .img, img {
   max-width: 100%;
   -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
 
@@ -181,6 +184,9 @@ a {
 a,
 .button {
   -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
 
@@ -312,21 +318,24 @@ input::-webkit-input-placeholder {
   color: #878c8f;
   font-size: 16px;
   opacity: 1;
-  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+input:-moz-placeholder {
+  color: #878c8f;
+  font-size: 16px;
+  opacity: 1;
   transition: 0.5s;
 }
 input::-moz-placeholder {
   color: #878c8f;
   font-size: 16px;
   opacity: 1;
-  -moz-transition: 0.5s;
   transition: 0.5s;
 }
 input:-ms-input-placeholder {
   color: #878c8f;
   font-size: 16px;
   opacity: 1;
-  -ms-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -334,38 +343,25 @@ textarea::-webkit-input-placeholder {
   color: #878c8f;
   font-size: 16px;
   opacity: 1;
-  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+textarea:-moz-placeholder {
+  color: #878c8f;
+  font-size: 16px;
+  opacity: 1;
   transition: 0.5s;
 }
 textarea::-moz-placeholder {
   color: #878c8f;
   font-size: 16px;
   opacity: 1;
-  -moz-transition: 0.5s;
   transition: 0.5s;
 }
 textarea:-ms-input-placeholder {
   color: #878c8f;
   font-size: 16px;
   opacity: 1;
-  -ms-transition: 0.5s;
   transition: 0.5s;
-}
-
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-  opacity: 0;
-}
-
-input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-input:focus::-ms-input-placeholder, textarea:focus::-ms-input-placeholder {
-  opacity: 0;
 }
 
 input:focus::placeholder, textarea:focus::placeholder {
@@ -1742,6 +1738,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding-right: 200px;
 }
 
+.mt-210 {
+  margin-top: 210px;
+}
+
 /*
 ************
 *************************
@@ -1755,12 +1755,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: 9;
   left: 0;
   right: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  -webkit-animation: 800ms ease-in-out 0s normal none 1 running fadeInDown;
-          animation: 800ms ease-in-out 0s normal none 1 running fadeInDown;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  animation: 800ms ease-in-out 0s normal none 1 running fadeInDown;
   width: 100%;
   border-bottom: 0px;
 }
@@ -1889,8 +1886,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 224px;
   top: 0;
   width: 250px;
-  -webkit-box-shadow: 0px 13px 29px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 13px 29px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 13px 29px rgba(0, 0, 0, 0.05);
   padding: 26px 30px;
   border-top: 5px solid #5F41FF;
   opacity: 0;
@@ -1932,7 +1928,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .philip_main_menu li ul.sub-menu li a:hover {
-  padding-left: 40px;
+  padding-left: 15px;
 }
 
 .philip_main_menu li.has-menu-children {
@@ -1943,8 +1939,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   right: -18px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   content: "\f107";
   font-family: "Font Awesome 5 Pro";
   font-weight: 500;
@@ -1974,13 +1969,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .philip_quick_contact {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .philip_quick_contact {
   color: black;
+}
+
+.philip_main_menu li.has-menu-children ul.sub-menu li.has-menu-children::before {
+  right: 0;
 }
 
 /*
@@ -2090,13 +2087,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .philip-service-item span {
   color: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .philip-service:hover .philip-service-content h3 {
   color: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -2128,7 +2123,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .philip-service-item span path {
   fill: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -2215,15 +2209,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   text-decoration: none;
   display: inline-block;
   border-radius: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #5F41FF;
 }
 
@@ -2231,25 +2219,18 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: #fff;
   color: #5F41FF;
   border: 1px solid #5F41Ff;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .video-button span {
-  border: 10px solid rgba(65, 104, 255, 0.0705882353);
-  background: rgba(255, 0, 0, 0);
+  border: 10px solid #4168FF12;
+  background: #f000;
   height: 80px;
   width: 80px;
   display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   color: #5F41FF;
 }
@@ -2297,58 +2278,27 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-weight: 600;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  border: 4px solid rgba(95, 65, 255, 0.2588235294);
-}
-
-@-webkit-keyframes myAnim {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-  }
-  30% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-    background: 5F41FF;
-    border: 2px solid #5F41FF;
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0.7;
-    background: #ffffff;
-  }
-  100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    opacity: 0;
-    border: 2px solid #5F41FF;
-  }
+  border: 4px solid #5F41FF42;
 }
 
 @keyframes myAnim {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     opacity: 1;
   }
   30% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     opacity: 1;
     background: 5F41FF;
     border: 2px solid #5F41FF;
   }
   50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0.7;
     background: #ffffff;
   }
   100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
     opacity: 0;
     border: 2px solid #5F41FF;
   }
@@ -2380,7 +2330,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .philip-social-list li a:hover {
   color: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -2421,8 +2370,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #5F41FF;
   padding: 20px;
   border-radius: 16px;
-  -webkit-box-shadow: -12px 12px 0px -2px;
-          box-shadow: -12px 12px 0px -2px;
+  box-shadow: -12px 12px 0px -2px;
   position: absolute;
   bottom: 91px;
   left: -14px;
@@ -2465,8 +2413,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-left-style: solid;
   border-left-width: 1px;
   border-radius: 0%;
-  -webkit-box-shadow: 0px 0px 0px 0px #cccccc;
-          box-shadow: 0px 0px 0px 0px #cccccc;
+  box-shadow: 0px 0px 0px 0px #cccccc;
   display: inline-block;
   width: 100%;
 }
@@ -2478,7 +2425,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 0px;
   width: 0px;
   background-color: transparent;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   opacity: 0;
 }
@@ -2518,11 +2464,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   height: 100%;
   left: 0;
   width: 100%;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
-  background: rgba(0, 0, 0, 0.4588235294);
+  background: #00000075;
   color: #fff;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
   visibility: hidden;
@@ -2533,11 +2477,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: block;
   height: 1px;
   width: 150px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transition: all 0.3s;
+  transform: scale(0);
+  transform-origin: top left;
   transition: all 0.3s;
   background: #acacac;
   top: 70px;
@@ -2553,14 +2494,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 1px;
   background: #acacac;
   top: 50px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: absolute;
   bottom: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+  transform: scale(0);
+  transform-origin: top left;
   left: 76px;
 }
 
@@ -2571,28 +2509,22 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 150px;
   background: #acacac;
   position: absolute;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   bottom: 70px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform: scale(0);
+  transform-origin: bottom right;
   right: 50px;
 }
 
 .hoverinner2::after {
   content: "";
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: block;
   height: 150px;
   width: 1px;
   background: #acacac;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform: scale(0);
+  transform-origin: bottom right;
   position: absolute;
   bottom: 50px;
   right: 76px;
@@ -2607,8 +2539,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 .philip-portfolio-item:hover .hoverinner1::before, .philip-portfolio-item:hover .hoverinner1::after, .philip-portfolio-item:hover .hoverinner2::before, .philip-portfolio-item:hover .hoverinner2::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .philip-portfolio-item:hover .hoverinner {
@@ -2624,8 +2555,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 *************************************************************** */
 .philip-qualification-box {
   padding: 31px 31px 58px 31px;
-  -webkit-box-shadow: 5px 9px 18px -2px rgba(210, 210, 210, 0.231372549);
-          box-shadow: 5px 9px 18px -2px rgba(210, 210, 210, 0.231372549);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.04);
 }
 
 .philip-qualification-box-title h3 {
@@ -2726,8 +2656,69 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: #5F41FF;
   color: #fff;
   border: 1px solid #5F41FF;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.philip-qualification-box.has-pos {
+  position: absolute;
+  bottom: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  background-color: #fff;
+  left: 0;
+}
+
+.philip-qa-button-sm-arrow-1 a {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.04));
+  text-align: center;
+  line-height: 46px;
+}
+.philip-qa-button-sm-arrow-1 a:hover {
+  background-color: #5F41FF;
+}
+.philip-qa-button-sm-arrow-1 a:hover i {
+  color: #fff;
+}
+
+.philip-qa-button-sm-arrow-1.has-pos a {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 999;
+}
+
+.philip-qualification-card {
+  position: relative;
+}
+.philip-qualification-card:hover .philip-qualification-box.has-pos {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.philip-qualification-card.has-cart-bottom .philip-qa-button-sm-arrow-1.has-pos a {
+  bottom: auto;
+  top: 0;
+  transform: translateY(-50%) translateX(-50%);
+  color: #5F41FF;
+  font-size: 20px;
+}
+.philip-qualification-card.has-cart-bottom .philip-qa-button-sm-arrow-1.has-pos a i {
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.philip-qualification-card.has-cart-bottom .philip-qualification-box.has-pos {
+  bottom: auto;
+  top: 30px;
+}
+.philip-qualification-card.has-cart-bottom:hover .philip-qualification-box.has-pos {
+  top: 0;
+  bottom: auto;
 }
 
 /*
@@ -2738,8 +2729,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 *************************************************************** */
 .philip-blog-card {
   border-radius: 9px;
-  -webkit-box-shadow: 6px 2px 9px 7px rgba(227, 227, 227, 0.0392156863);
-          box-shadow: 6px 2px 9px 7px rgba(227, 227, 227, 0.0392156863);
+  box-shadow: 6px 2px 9px 7px #e3e3e30a;
   background-color: #fff;
 }
 
@@ -2863,15 +2853,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .info-content span {
   width: 40px;
   height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-right: 20px;
   border: 1px solid #5F41FF;
   border-radius: 10px;
@@ -2898,7 +2882,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .philip-social-info ul li a:hover {
   color: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -2912,6 +2895,30 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   margin: 0;
+}
+
+.philip-contact-from input:focus, .philip-contact-from textarea:focus {
+  box-shadow: none;
+}
+.philip-contact-from .has-nice-select {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 30px;
+  border: 0;
+}
+.philip-contact-from .has-nice-select::after {
+  display: none;
+}
+.philip-contact-from .has-nice-select:hover {
+  box-shadow: none;
+}
+.philip-contact-from .has-nice-select .list {
+  width: 100%;
+}
+.philip-contact-from .has-nice-select span.current {
+  color: #737373;
+  font-size: 14px;
 }
 
 .philip-contact-from input, select, textarea {
@@ -3010,14 +3017,15 @@ input:focus::placeholder, textarea:focus::placeholder {
   cursor: pointer;
   display: block;
   border-radius: 50px;
-  -webkit-box-shadow: inset 0 0 0 2px #1a1a1a;
-          box-shadow: inset 0 0 0 2px #1a1a1a;
+  box-shadow: inset 0 0 0 2px #1a1a1a;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateY(15px);
-          transform: translateY(15px);
+  transform: translateY(15px);
   -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
   background-color: #fff;
 }
@@ -3045,14 +3053,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .progress-wrap svg.progress-circle path {
   stroke: #F94D1C;
   stroke-width: 4;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
 }
 .progress-wrap:is(.progress-wrap-dark) {
-  -webkit-box-shadow: inset 0 0 0 2px #f6f8fa;
-          box-shadow: inset 0 0 0 2px #f6f8fa;
+  box-shadow: inset 0 0 0 2px #f6f8fa;
   background-color: transparent;
 }
 .progress-wrap:is(.progress-wrap-dark)::after {
@@ -3066,8 +3075,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 1;
   right: 50px;
   visibility: visible;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 @media (max-width: 767px) {
   .progress-wrap.active-progress {
@@ -3116,7 +3124,6 @@ footer {
 
 .philip-quick-link ul li a:hover {
   color: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -3139,7 +3146,6 @@ footer {
 
 .blog-content:hover a {
   color: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -3177,7 +3183,7 @@ footer {
 
 .philip-footer-bottom {
   padding: 50px 0;
-  border-top: 1px solid rgba(112, 112, 112, 0.1019607843);
+  border-top: 1px solid #7070701a;
 }
 
 .philip-footer-bottom-content p {
@@ -3203,7 +3209,6 @@ footer {
 }
 .footer-terms li a:hover {
   color: #5F41FF;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -3213,8 +3218,6 @@ footer {
 .footer-terms .line-footer::after {
   content: "";
   display: block;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   top: 7px;
   right: -26px;
@@ -3223,3 +3226,180 @@ footer {
   width: 1px;
   position: absolute;
 }
+
+.side-info {
+  background: #f5f5f5;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  right: -100%;
+  top: 0;
+  width: 365px;
+  padding: 35px 35px 45px 45px;
+  transition: 0.6s;
+  overflow-y: scroll;
+}
+
+.side-info.info-open {
+  right: 0;
+}
+
+.side-info-logo img {
+  max-width: 168px;
+}
+
+.side-info-close {
+  background: none;
+  border: 0;
+  color: #141517;
+  font-size: 20px;
+  padding: 0;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  -ms-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+}
+
+.filter-search-input input {
+  width: 100%;
+  height: 55px;
+  padding: 0 35px 0 15px;
+  font-size: 14px;
+  color: #575757;
+  outline: none;
+  border: 1px solid #edeef2;
+  border-radius: 5px;
+}
+.filter-search-input button {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  border: 0;
+  content: "";
+  background: #ffffff;
+  transform: translateY(-50%);
+  color: #2467EC;
+  font-size: 14px;
+}
+
+.header-menu-top-icon a {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.header-menu-top-icon i {
+  margin-right: 10px;
+  color: #2467EC;
+}
+
+.edu-four-btn {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #5F41FF;
+  padding: 0 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  border: 1px solid transparent;
+}
+.edu-four-btn:hover {
+  color: #fff;
+}
+
+.offcanvas-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 1000;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.offcanvas-overlay.overlay-open {
+  opacity: 0.3;
+  visibility: visible;
+}
+
+/***
+* Mean menu
+*/
+div.mean-container .mean-nav {
+  background: none;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+div.mean-container .mean-nav > ul {
+  display: block !important;
+}
+div.mean-container .mean-nav ul li a {
+  width: 100%;
+  color: #5F41FF;
+  border-top: 1px solid #EDEEF2;
+  font-size: 16px;
+  text-transform: capitalize;
+  opacity: 1;
+}
+div.mean-container .mean-nav ul li a i {
+  display: none;
+}
+div.mean-container .mean-nav ul li a.mean-expand {
+  height: 25px;
+  border: none;
+}
+div.mean-container .mean-nav ul li a.mean-expand::before {
+  position: absolute;
+  content: "+";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+div.mean-container .mean-nav ul li a.mean-expand.mean-clicked::before {
+  content: "-";
+}
+div.mean-container a.meanmenu-reveal {
+  display: none !important;
+}
+
+.mean-container .mean-nav ul li a.mean-expand:hover {
+  background: #5F41FF;
+  color: #fff;
+}
+
+.mean-container .mean-nav ul li a {
+  line-height: 24px;
+}
+
+.mean-container .mean-nav ul {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+}
+
+div.mean-container .mean-nav ul li a.mean-expand {
+  height: 31px;
+  border: none;
+  line-height: 32px;
+}
+
+.mean-container .mean-nav ul {
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=main.css.map */

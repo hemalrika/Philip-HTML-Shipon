@@ -3,7 +3,7 @@
 
 // meanmenu
 $('#mobile-menu').meanmenu({
-	meanMenuContainer: '.mobile_menu',
+	meanMenuContainer: '.mobile-menu',
 	meanScreenWidth: "991"
 });
 
@@ -307,7 +307,7 @@ $('.popup-image').magnificPopup({
 $('.popup-video').magnificPopup({
 	type: 'iframe'
 });
-$('.cinkes_free_consultaion_wrapper select, .cinkes_contact_form select').niceSelect();
+$('.has-nice-select').niceSelect();
 // data background
 $("[data-background").each(function(){
 	$(this).css("background-image","url("+$(this).attr("data-background") + ") ")
@@ -365,6 +365,9 @@ $('.portfolio-grid-wrapper').isotope({
 		// use element for option
 		columnWidth: '.portfolio-grid-item'
 	}
-})
-
+});
+$(".philip_quick_contact_action").on("click", function () {
+	$(".side-info").addClass("info-open");
+	$(".offcanvas-overlay").addClass("overlay-open");
+});
 })(jQuery);

@@ -422,3 +422,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 @for $i from 1 through 40 {
     .pr-#{5 * $i}{padding-right: 5px *$i;}
 }
+
+.mt-210 {
+    margin-top: 210px;
+}

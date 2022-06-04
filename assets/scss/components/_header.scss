@@ -183,7 +183,7 @@
 }
 
 .philip_main_menu li ul.sub-menu li a:hover {
-  padding-left: 40px;
+  padding-left: 15px;
 }
 .philip_main_menu li.has-menu-children {
   margin-right: 43px;
@@ -220,4 +220,7 @@ color: #1a1a1a;
 }
 .philip_quick_contact {
   color: black
+}
+.philip_main_menu li.has-menu-children ul.sub-menu li.has-menu-children::before {
+	right: 0;
 }
